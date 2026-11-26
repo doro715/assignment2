@@ -61,7 +61,7 @@ public class CarView extends JFrame {
                         1);//step
         gasSpinner = new JSpinner(spinnerModel);
         gasSpinner.addChangeListener(e -> {
-                gasAmount = (int) ((JSpinner)e.getSource()).getValue();
+            gasAmount = (int) ((JSpinner)e.getSource()).getValue();
         });
 
         gasPanel.setLayout(new BorderLayout());
@@ -98,6 +98,28 @@ public class CarView extends JFrame {
         gasButton.addActionListener(e -> {
             carC.gas(gasAmount);
         });
+        brakeButton.addActionListener(e -> {
+            carC.brake(gasAmount);
+        });
+        leftButton.addActionListener(e -> {
+            carC.turnLeft();
+        });
+        rightButton.addActionListener(e -> {
+            carC.turnRight();
+        });
+        startButton.addActionListener(e -> {
+            carC.startEngine();
+        });
+        stopButton.addActionListener(e -> {
+            carC.stopEngine();
+        });
+        turboOnButton.addActionListener(e -> {
+            carC.setTurboOn();
+        });
+        turboOffButton.addActionListener(e -> {
+            carC.setTurboOff();
+        });
+
 
         // Make the panel layout more compact
         this.pack();
