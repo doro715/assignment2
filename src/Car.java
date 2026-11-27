@@ -1,6 +1,8 @@
 import java.awt.*;
 
-public abstract class Car implements Moveable{
+public abstract class
+
+Car implements Moveable{
     protected int nrDoors;
     protected double enginePower;
     protected double currentSpeed;
@@ -111,9 +113,9 @@ public abstract class Car implements Moveable{
     @Override
     public void move() {
         if (direction == Direction.NORTH) {
-            y += currentSpeed;
-        } else if (direction == Direction.SOUTH) {
             y -= currentSpeed;
+        } else if (direction == Direction.SOUTH) {
+            y += currentSpeed;
         } else if (direction == Direction.EAST) {
             x += currentSpeed;
         } else if (direction == Direction.WEST) {
