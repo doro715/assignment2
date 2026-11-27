@@ -28,7 +28,7 @@ This class builds the GUI and listen to button clicks. \
 
 
 ***Task 4: New UML Design***\
-![UML design](src/pics/UML_new_design.png)
+![UML design](src/pics/UML new design.png)
 
 **Motivation for the New Design**\
 To meet the principles of SRP, SoC and Coupling. Here are some suggestions for design.
