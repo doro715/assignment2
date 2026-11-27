@@ -1,6 +1,6 @@
 # Task 2: Dependencies
 
-UML diagram: `task2-uml.png`
+UML diagram: `task2.drawio.png`
 
 ## Necessary dependencies
 - `Volvo240`, `Saab95` → `Car` → `Moveable`, and `Car` → `Direction`: the model's inheritance design.
