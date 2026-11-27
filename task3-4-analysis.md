@@ -32,8 +32,8 @@ This class builds the GUI and listen to button clicks. \
 
 **Motivation for the New Design**\
 To meet the principles of SRP, SoC and Coupling. Here are some suggestions for design.
-1. Split "CarController" class into CarController and TimeLoop. So CarController manages user input, while TimeLoop handles with timer related to car.move().
-2. Make "DrawPanel" class extensible. It means that it needs an abstract Car class to handle everything. We dont need to modify whenever a new car is added. This meets OCP. 
-3. Decouple 
+1. Split ` CarController`  class into ` CarController`  and `TimeLoop` . So CarController manages user input, while TimeLoop handles with timer related to car.move().
+2. Make `DrawPanel`  class extensible. It means that it needs an abstract Car class to handle everything. We dont need to modify whenever a new car is added. This meets OCP. 
+3. Decouple Model and View from Observer. The `Car` (Model) implements `CarObservable`, and the `DrawPanel` (View) implements `CarObserver`. When a car moves, it simply calls `notifyObservers()`. `DrawPanel` catches this and repaints. The Model is now completely decoupled from the View.
 
 
